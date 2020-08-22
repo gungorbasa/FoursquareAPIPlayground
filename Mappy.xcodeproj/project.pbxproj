@@ -14,6 +14,8 @@
 		2362F65F24F0DB9A008DACD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2362F65E24F0DB9A008DACD5 /* Assets.xcassets */; };
 		2362F66224F0DB9A008DACD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2362F66024F0DB9A008DACD5 /* LaunchScreen.storyboard */; };
 		2362F66D24F0DB9A008DACD5 /* MappyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F66C24F0DB9A008DACD5 /* MappyTests.swift */; };
+		2362F67924F0DCF6008DACD5 /* NetworkRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F67824F0DCF6008DACD5 /* NetworkRouting.swift */; };
+		2362F67B24F0DD16008DACD5 /* FoursquareRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F67A24F0DD16008DACD5 /* FoursquareRoutes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		2362F66824F0DB9A008DACD5 /* MappyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MappyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2362F66C24F0DB9A008DACD5 /* MappyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappyTests.swift; sourceTree = "<group>"; };
 		2362F66E24F0DB9A008DACD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2362F67824F0DCF6008DACD5 /* NetworkRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouting.swift; sourceTree = "<group>"; };
+		2362F67A24F0DD16008DACD5 /* FoursquareRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareRoutes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		2362F65424F0DB94008DACD5 /* Mappy */ = {
 			isa = PBXGroup;
 			children = (
+				2362F67724F0DC95008DACD5 /* Network */,
 				2362F65524F0DB94008DACD5 /* AppDelegate.swift */,
 				2362F65724F0DB94008DACD5 /* SceneDelegate.swift */,
 				2362F65924F0DB94008DACD5 /* ViewController.swift */,
@@ -97,6 +102,23 @@
 				2362F66E24F0DB9A008DACD5 /* Info.plist */,
 			);
 			path = MappyTests;
+			sourceTree = "<group>";
+		};
+		2362F67724F0DC95008DACD5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2362F67C24F0DD19008DACD5 /* NetworkRoutes */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2362F67C24F0DD19008DACD5 /* NetworkRoutes */ = {
+			isa = PBXGroup;
+			children = (
+				2362F67824F0DCF6008DACD5 /* NetworkRouting.swift */,
+				2362F67A24F0DD16008DACD5 /* FoursquareRoutes.swift */,
+			);
+			path = NetworkRoutes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,8 +223,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2362F65A24F0DB94008DACD5 /* ViewController.swift in Sources */,
+				2362F67924F0DCF6008DACD5 /* NetworkRouting.swift in Sources */,
 				2362F65624F0DB94008DACD5 /* AppDelegate.swift in Sources */,
 				2362F65824F0DB94008DACD5 /* SceneDelegate.swift in Sources */,
+				2362F67B24F0DD16008DACD5 /* FoursquareRoutes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
