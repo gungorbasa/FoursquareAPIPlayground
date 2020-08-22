@@ -22,7 +22,7 @@ final class AlamofireNetwork: Networking {
     completion: @escaping (Result<T, Error>) -> ()
   ) where T : Decodable, T : Encodable {
     let request = session.request(
-      route.host,
+      route.host + route.path,
       method: convertMethod(method: route.method),
       parameters: route.parameters,
       encoding: URLEncoding(destination: .queryString),

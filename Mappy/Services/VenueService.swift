@@ -8,9 +8,14 @@
 
 import Foundation
 
-final class VenueService: PaginatableService {
+protocol VenueServing {
 
-  typealias T = String
+  typealias T = VenuesResponse
+
+  func fetch(_ latitude: Float, longitude: Float, completion: @escaping (Result<T, Error>) -> Void)
+}
+
+final class VenueService: VenueServing {
 
   private let networking: Networking
 
@@ -18,11 +23,11 @@ final class VenueService: PaginatableService {
     self.networking = networking
   }
 
-  func fetch(_ completion: @escaping (Result<T, Error>) -> Void) {
-
-  }
-
-  func fetchMore(_ completion: @escaping (Result<T, Error>) -> Void) {
-
+  func fetch(_ latitude: Float, longitude: Float, completion: @escaping (Result<T, Error>) -> Void) {
+    networking.run(
+    route: FoursquareRoutes.venues(latitude: latitude, longitude: longitude)
+    ) { (result: Result<T, Error>) in
+      completion(result)
+    }
   }
 }

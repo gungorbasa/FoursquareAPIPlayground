@@ -26,6 +26,9 @@
 		2362F69724F10063008DACD5 /* HTTPResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F69624F10063008DACD5 /* HTTPResponseError.swift */; };
 		2362F69A24F1011D008DACD5 /* VenueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F69924F1011D008DACD5 /* VenueService.swift */; };
 		2362F69E24F107B9008DACD5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F69D24F107B9008DACD5 /* Service.swift */; };
+		23ACCF0A24F181E00008953A /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ACCF0924F181E00008953A /* Venue.swift */; };
+		23ACCF0C24F1822D0008953A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ACCF0B24F1822D0008953A /* Location.swift */; };
+		23ACCF1024F1833A0008953A /* VenuesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ACCF0F24F1833A0008953A /* VenuesResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		2362F69624F10063008DACD5 /* HTTPResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponseError.swift; sourceTree = "<group>"; };
 		2362F69924F1011D008DACD5 /* VenueService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueService.swift; sourceTree = "<group>"; };
 		2362F69D24F107B9008DACD5 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		23ACCF0924F181E00008953A /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		23ACCF0B24F1822D0008953A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		23ACCF0F24F1833A0008953A /* VenuesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 		2362F65424F0DB94008DACD5 /* Mappy */ = {
 			isa = PBXGroup;
 			children = (
+				23ACCF0824F181D00008953A /* Models */,
 				2362F68124F0E123008DACD5 /* Utils */,
 				2362F67E24F0E02E008DACD5 /* Configuration */,
 				2362F67724F0DC95008DACD5 /* Network */,
@@ -180,6 +187,16 @@
 				2362F69924F1011D008DACD5 /* VenueService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		23ACCF0824F181D00008953A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				23ACCF0F24F1833A0008953A /* VenuesResponse.swift */,
+				23ACCF0924F181E00008953A /* Venue.swift */,
+				23ACCF0B24F1822D0008953A /* Location.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,13 +310,16 @@
 				2362F65A24F0DB94008DACD5 /* ViewController.swift in Sources */,
 				2362F69E24F107B9008DACD5 /* Service.swift in Sources */,
 				2362F69524F10031008DACD5 /* AlamofireNetwork.swift in Sources */,
+				23ACCF0A24F181E00008953A /* Venue.swift in Sources */,
 				2362F68C24F0F82C008DACD5 /* Configurating.swift in Sources */,
 				2362F67924F0DCF6008DACD5 /* NetworkRouting.swift in Sources */,
 				2362F69024F0FF7B008DACD5 /* Networking.swift in Sources */,
+				23ACCF0C24F1822D0008953A /* Location.swift in Sources */,
 				2362F68A24F0ED87008DACD5 /* FoursquareConfig.swift in Sources */,
 				2362F65624F0DB94008DACD5 /* AppDelegate.swift in Sources */,
 				2362F69724F10063008DACD5 /* HTTPResponseError.swift in Sources */,
 				2362F65824F0DB94008DACD5 /* SceneDelegate.swift in Sources */,
+				23ACCF1024F1833A0008953A /* VenuesResponse.swift in Sources */,
 				2362F69A24F1011D008DACD5 /* VenueService.swift in Sources */,
 				2362F67B24F0DD16008DACD5 /* FoursquareRoutes.swift in Sources */,
 				2362F68E24F0FD46008DACD5 /* DependecyContainer.swift in Sources */,

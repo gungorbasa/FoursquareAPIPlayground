@@ -10,7 +10,7 @@ import Foundation
 
 enum FoursquareRoutes: NetworkRouting {
 
-  case venues
+  case venues(latitude: Float, longitude: Float)
   case details(String)
 
   var host: String { return "https://api.foursquare.com/v2" }
@@ -18,7 +18,7 @@ enum FoursquareRoutes: NetworkRouting {
   var path: String {
     switch self {
     case .venues:
-      return "/venues/explore"
+      return "/venues/search"
     case .details(let venueId):
       return "/venues/\(venueId)"
     }
@@ -26,7 +26,20 @@ enum FoursquareRoutes: NetworkRouting {
 
   var headers: [String : String] { [:] }
 
-  var parameters: [String : Any] { [:] }
+  var parameters: [String : Any] {
+    var defaultParams: [String: Any] = [
+      "client_id": DependencyContainer.configuration.foursquareConfig?.clientId ?? "",
+      "client_secret": DependencyContainer.configuration.foursquareConfig?.clientSecret ?? "",
+      "v": "20200822"
+    ]
+    switch self {
+    case .venues(let latitude, let longitude):
+      defaultParams["ll"] = "\(latitude), \(longitude)"
+    default:
+      return [:]
+    }
+    return defaultParams
+  }
 
   var body: [String : Any] { [:] }
 
