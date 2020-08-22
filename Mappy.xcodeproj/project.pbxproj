@@ -16,6 +16,9 @@
 		2362F66D24F0DB9A008DACD5 /* MappyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F66C24F0DB9A008DACD5 /* MappyTests.swift */; };
 		2362F67924F0DCF6008DACD5 /* NetworkRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F67824F0DCF6008DACD5 /* NetworkRouting.swift */; };
 		2362F67B24F0DD16008DACD5 /* FoursquareRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F67A24F0DD16008DACD5 /* FoursquareRoutes.swift */; };
+		2362F68024F0E04B008DACD5 /* FoursquareConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2362F67F24F0E04B008DACD5 /* FoursquareConfig.plist */; };
+		2362F68A24F0ED87008DACD5 /* FoursquareConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F68924F0ED87008DACD5 /* FoursquareConfig.swift */; };
+		2362F68C24F0F82C008DACD5 /* Configurating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F68B24F0F82C008DACD5 /* Configurating.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		2362F66E24F0DB9A008DACD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2362F67824F0DCF6008DACD5 /* NetworkRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouting.swift; sourceTree = "<group>"; };
 		2362F67A24F0DD16008DACD5 /* FoursquareRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareRoutes.swift; sourceTree = "<group>"; };
+		2362F67F24F0E04B008DACD5 /* FoursquareConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FoursquareConfig.plist; sourceTree = "<group>"; };
+		2362F68924F0ED87008DACD5 /* FoursquareConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareConfig.swift; sourceTree = "<group>"; };
+		2362F68B24F0F82C008DACD5 /* Configurating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurating.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,8 @@
 		2362F65424F0DB94008DACD5 /* Mappy */ = {
 			isa = PBXGroup;
 			children = (
+				2362F68124F0E123008DACD5 /* Utils */,
+				2362F67E24F0E02E008DACD5 /* Configuration */,
 				2362F67724F0DC95008DACD5 /* Network */,
 				2362F65524F0DB94008DACD5 /* AppDelegate.swift */,
 				2362F65724F0DB94008DACD5 /* SceneDelegate.swift */,
@@ -119,6 +127,31 @@
 				2362F67A24F0DD16008DACD5 /* FoursquareRoutes.swift */,
 			);
 			path = NetworkRoutes;
+			sourceTree = "<group>";
+		};
+		2362F67E24F0E02E008DACD5 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				2362F68824F0ED79008DACD5 /* Models */,
+				2362F67F24F0E04B008DACD5 /* FoursquareConfig.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		2362F68124F0E123008DACD5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2362F68824F0ED79008DACD5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2362F68924F0ED87008DACD5 /* FoursquareConfig.swift */,
+				2362F68B24F0F82C008DACD5 /* Configurating.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +238,7 @@
 				2362F66224F0DB9A008DACD5 /* LaunchScreen.storyboard in Resources */,
 				2362F65F24F0DB9A008DACD5 /* Assets.xcassets in Resources */,
 				2362F65D24F0DB94008DACD5 /* Main.storyboard in Resources */,
+				2362F68024F0E04B008DACD5 /* FoursquareConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,7 +257,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2362F65A24F0DB94008DACD5 /* ViewController.swift in Sources */,
+				2362F68C24F0F82C008DACD5 /* Configurating.swift in Sources */,
 				2362F67924F0DCF6008DACD5 /* NetworkRouting.swift in Sources */,
+				2362F68A24F0ED87008DACD5 /* FoursquareConfig.swift in Sources */,
 				2362F65624F0DB94008DACD5 /* AppDelegate.swift in Sources */,
 				2362F65824F0DB94008DACD5 /* SceneDelegate.swift in Sources */,
 				2362F67B24F0DD16008DACD5 /* FoursquareRoutes.swift in Sources */,
