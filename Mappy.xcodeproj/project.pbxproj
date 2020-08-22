@@ -24,6 +24,8 @@
 		2362F69324F10010008DACD5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2362F69224F10010008DACD5 /* Alamofire */; };
 		2362F69524F10031008DACD5 /* AlamofireNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F69424F10031008DACD5 /* AlamofireNetwork.swift */; };
 		2362F69724F10063008DACD5 /* HTTPResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F69624F10063008DACD5 /* HTTPResponseError.swift */; };
+		2362F69A24F1011D008DACD5 /* VenueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F69924F1011D008DACD5 /* VenueService.swift */; };
+		2362F69E24F107B9008DACD5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F69D24F107B9008DACD5 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		2362F68F24F0FF7B008DACD5 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		2362F69424F10031008DACD5 /* AlamofireNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetwork.swift; sourceTree = "<group>"; };
 		2362F69624F10063008DACD5 /* HTTPResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponseError.swift; sourceTree = "<group>"; };
+		2362F69924F1011D008DACD5 /* VenueService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueService.swift; sourceTree = "<group>"; };
+		2362F69D24F107B9008DACD5 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 				2362F68124F0E123008DACD5 /* Utils */,
 				2362F67E24F0E02E008DACD5 /* Configuration */,
 				2362F67724F0DC95008DACD5 /* Network */,
+				2362F69824F100F2008DACD5 /* Services */,
 				2362F65524F0DB94008DACD5 /* AppDelegate.swift */,
 				2362F65724F0DB94008DACD5 /* SceneDelegate.swift */,
 				2362F65924F0DB94008DACD5 /* ViewController.swift */,
@@ -166,6 +171,15 @@
 				2362F68B24F0F82C008DACD5 /* Configurating.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2362F69824F100F2008DACD5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2362F69D24F107B9008DACD5 /* Service.swift */,
+				2362F69924F1011D008DACD5 /* VenueService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2362F65A24F0DB94008DACD5 /* ViewController.swift in Sources */,
+				2362F69E24F107B9008DACD5 /* Service.swift in Sources */,
 				2362F69524F10031008DACD5 /* AlamofireNetwork.swift in Sources */,
 				2362F68C24F0F82C008DACD5 /* Configurating.swift in Sources */,
 				2362F67924F0DCF6008DACD5 /* NetworkRouting.swift in Sources */,
@@ -285,6 +300,7 @@
 				2362F65624F0DB94008DACD5 /* AppDelegate.swift in Sources */,
 				2362F69724F10063008DACD5 /* HTTPResponseError.swift in Sources */,
 				2362F65824F0DB94008DACD5 /* SceneDelegate.swift in Sources */,
+				2362F69A24F1011D008DACD5 /* VenueService.swift in Sources */,
 				2362F67B24F0DD16008DACD5 /* FoursquareRoutes.swift in Sources */,
 				2362F68E24F0FD46008DACD5 /* DependecyContainer.swift in Sources */,
 			);

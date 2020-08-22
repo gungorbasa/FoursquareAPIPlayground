@@ -10,10 +10,12 @@ import Foundation
 
 protocol DependencyContaining {
 
-  var configuration: Configurating { get }
+  static var configuration: Configurating { get }
+  static var networking: Networking { get }
 }
 
 struct DependencyContainer: DependencyContaining {
   
-  let configuration: Configurating = Configuration()
+  static let configuration: Configurating = Configuration()
+  static let networking: Networking = AlamofireNetwork()
 }
