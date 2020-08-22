@@ -19,6 +19,7 @@
 		2362F68024F0E04B008DACD5 /* FoursquareConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2362F67F24F0E04B008DACD5 /* FoursquareConfig.plist */; };
 		2362F68A24F0ED87008DACD5 /* FoursquareConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F68924F0ED87008DACD5 /* FoursquareConfig.swift */; };
 		2362F68C24F0F82C008DACD5 /* Configurating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F68B24F0F82C008DACD5 /* Configurating.swift */; };
+		2362F68E24F0FD46008DACD5 /* DependecyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F68D24F0FD46008DACD5 /* DependecyContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		2362F67F24F0E04B008DACD5 /* FoursquareConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FoursquareConfig.plist; sourceTree = "<group>"; };
 		2362F68924F0ED87008DACD5 /* FoursquareConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareConfig.swift; sourceTree = "<group>"; };
 		2362F68B24F0F82C008DACD5 /* Configurating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurating.swift; sourceTree = "<group>"; };
+		2362F68D24F0FD46008DACD5 /* DependecyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependecyContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				2362F65E24F0DB9A008DACD5 /* Assets.xcassets */,
 				2362F66024F0DB9A008DACD5 /* LaunchScreen.storyboard */,
 				2362F66324F0DB9A008DACD5 /* Info.plist */,
+				2362F68D24F0FD46008DACD5 /* DependecyContainer.swift */,
 			);
 			path = Mappy;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				2362F65624F0DB94008DACD5 /* AppDelegate.swift in Sources */,
 				2362F65824F0DB94008DACD5 /* SceneDelegate.swift in Sources */,
 				2362F67B24F0DD16008DACD5 /* FoursquareRoutes.swift in Sources */,
+				2362F68E24F0FD46008DACD5 /* DependecyContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
