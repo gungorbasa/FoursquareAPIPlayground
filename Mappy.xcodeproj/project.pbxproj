@@ -37,6 +37,7 @@
 		23EC762D24F2638600925B9E /* AnchorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC762C24F2638600925B9E /* AnchorViewModel.swift */; };
 		23EC762F24F2D90100925B9E /* AnchorViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC762E24F2D90100925B9E /* AnchorViewModelFactory.swift */; };
 		23EC763224F2E02D00925B9E /* MKMapView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC763124F2E02D00925B9E /* MKMapView+Extension.swift */; };
+		23EC763424F3046500925B9E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC763324F3046500925B9E /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		23EC762C24F2638600925B9E /* AnchorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorViewModel.swift; sourceTree = "<group>"; };
 		23EC762E24F2D90100925B9E /* AnchorViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorViewModelFactory.swift; sourceTree = "<group>"; };
 		23EC763124F2E02D00925B9E /* MKMapView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Extension.swift"; sourceTree = "<group>"; };
+		23EC763324F3046500925B9E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				2362F66024F0DB9A008DACD5 /* LaunchScreen.storyboard */,
 				2362F66324F0DB9A008DACD5 /* Info.plist */,
 				2362F68D24F0FD46008DACD5 /* DependecyContainer.swift */,
+				23EC763324F3046500925B9E /* LocationManager.swift */,
 			);
 			path = Mappy;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			files = (
 				2362F69E24F107B9008DACD5 /* Service.swift in Sources */,
 				23EC762924F18B4F00925B9E /* VenueMapBuilder.swift in Sources */,
+				23EC763424F3046500925B9E /* LocationManager.swift in Sources */,
 				2362F69524F10031008DACD5 /* AlamofireNetwork.swift in Sources */,
 				23EC762D24F2638600925B9E /* AnchorViewModel.swift in Sources */,
 				23ACCF0A24F181E00008953A /* Venue.swift in Sources */,

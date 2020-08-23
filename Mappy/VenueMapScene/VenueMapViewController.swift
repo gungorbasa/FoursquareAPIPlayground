@@ -17,6 +17,7 @@ final class VenueMapViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    presenter.onViewDidLoad()
     setup()
   }
 
@@ -34,7 +35,18 @@ extension VenueMapViewController: MKMapViewDelegate {
   func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
     let center = mapView.region.center
     presenter.venueRegionDidChange(latitude: center.latitude, longitude: center.longitude)
-    print("Region Changed: \(mapView.region.center)")
+  }
+
+  func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+    guard let ann = view.annotation as? AnchorViewModeling else {
+      print("nooooo")
+      return
+    }
+    print(ann)
+  }
+
+  func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+    print(view.annotation)
   }
 }
 
@@ -44,6 +56,12 @@ extension VenueMapViewController: VenueMapViewProtocol {
     switch output {
     case .anchor(let viewModel):
       addAnnotation(viewModel: viewModel)
+    case .currentLocation(let latitude, let longitude):
+      mapView.centerToLocation(
+        CLLocation(latitude: latitude, longitude: longitude),
+        regionRadius: 800,
+        animated: true
+      )
     }
   }
 }

@@ -30,6 +30,11 @@ final class VenueMapPresenter: VenueMapPresenterProtocol {
     self.interactor.delegate = self
   }
 
+  func onViewDidLoad() {
+    interactor.requestLocationAuthorization()
+    interactor.requestLocation()
+  }
+
   func venueRegionDidChange(latitude: Double, longitude: Double) {
     interactor.venues(for: latitude, longitude: longitude)
   }
@@ -49,6 +54,8 @@ extension VenueMapPresenter: VenueMapInteractorDelegate {
         }
         // TODO: This may lead to memory problems. We need to find an eviction strategy
         self.venueSet = self.venueSet.union(newVenueSet)
+      case .location(let latitude, let longitude):
+        self.view?.handleOutput(.currentLocation(lat: latitude, lng: longitude))
       case .error(let error):
         print(error.localizedDescription)
       }

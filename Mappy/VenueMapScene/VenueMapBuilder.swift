@@ -16,7 +16,8 @@ final class VenueMapBuilder {
     // TODO: Injections
     let router = VenueMapRouter(view)
     let service = VenueService()
-    let interactor = VenueMapInteractor(service)
+    let locationManger = LocationManager()
+    let interactor = VenueMapInteractor(service, locationManager: locationManger)
     let factory = AnchorViewModelFactory()
     let presenter = VenueMapPresenter(view, interactor: interactor, router: router, factory: factory)
     view.presenter = presenter

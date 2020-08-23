@@ -13,9 +13,27 @@ final class VenueMapInteractor: VenueMapInteractorProtocol {
   weak var delegate: VenueMapInteractorDelegate?
 
   private let service: VenueServing
+  private let locationManager: LocationManaging
 
-  init(_ service: VenueServing) {
+  init(_ service: VenueServing, locationManager: LocationManaging) {
     self.service = service
+    self.locationManager = locationManager
+  }
+
+  func requestLocationAuthorization() {
+    locationManager.requestAuthorization()
+  }
+
+  func requestLocation() {
+    locationManager.requestLocation { [weak self] result in
+      guard let self = self else { return }
+      switch result {
+      case .success(let coordinates):
+        self.delegate?.handleOutput(.location(lat: coordinates.latitude, lng: coordinates.longitude))
+      case .failure(let error):
+        self.delegate?.handleOutput(.error(error))
+      }
+    }
   }
 
   func venues(for latitude: Double, longitude: Double) {

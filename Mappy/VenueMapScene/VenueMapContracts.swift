@@ -14,12 +14,15 @@ protocol VenueMapInteractorProtocol: class {
   var delegate: VenueMapInteractorDelegate? { get set }
 
   func venues(for latitude: Double, longitude: Double)
+  func requestLocationAuthorization()
+  func requestLocation()
 }
 
 enum VenueMapInteractorOutput {
 
   case venueList([Venue])
   case error(Error)
+  case location(lat: Double, lng: Double)
 }
 
 protocol VenueMapInteractorDelegate: class {
@@ -31,11 +34,13 @@ protocol VenueMapInteractorDelegate: class {
 protocol VenueMapPresenterProtocol: class {
 
   func venueRegionDidChange(latitude: Double, longitude: Double)
+  func onViewDidLoad()
 }
 
 enum VenueMapPresenterOutput {
 
   case anchor(AnchorViewModeling)
+  case currentLocation(lat: Double, lng: Double)
 }
 
 // MARK: - View
