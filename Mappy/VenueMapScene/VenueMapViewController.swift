@@ -7,24 +7,40 @@
 //
 
 import UIKit
+import MapKit
 
 final class VenueMapViewController: UIViewController {
 
-    var presenter: VenueMapPresenterProtocol!
+  @IBOutlet private weak var mapView: MKMapView!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setup()
-    }
+  var presenter: VenueMapPresenterProtocol!
 
-    private func setup() {
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    setup()
+  }
 
-    }
+  private func setup() {
+    mapView.delegate = self
+  }
+
+  func addAnnotation(viewModel: AnchorViewModeling) {
+    mapView.addAnnotation(viewModel)
+  }
+}
+
+extension VenueMapViewController: MKMapViewDelegate {
+  
+  func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+    let center = mapView.region.center
+    presenter.venueRegionDidChange(latitude: center.latitude, longitude: center.longitude)
+    print("Region Changed: \(mapView.region.center)")
+  }
 }
 
 extension VenueMapViewController: VenueMapViewProtocol {
 
-    func handleOutput(_ output: VenueMapPresenterOutput) {
+  func handleOutput(_ output: VenueMapPresenterOutput) {
 
-    }
+  }
 }

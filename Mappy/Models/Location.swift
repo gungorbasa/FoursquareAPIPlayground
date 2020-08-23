@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct Location: Codable {
+struct Location: Codable, Hashable {
   
-  let lat: Float
-  let lng: Float
+  let lat: Double
+  let lng: Double
 }

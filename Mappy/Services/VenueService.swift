@@ -12,7 +12,7 @@ protocol VenueServing {
 
   typealias T = VenuesResponse
 
-  func fetch(_ latitude: Float, longitude: Float, completion: @escaping (Result<T, Error>) -> Void)
+  func fetch(_ latitude: Double, longitude: Double, completion: @escaping (Result<T, Error>) -> Void)
 }
 
 final class VenueService: VenueServing {
@@ -23,7 +23,7 @@ final class VenueService: VenueServing {
     self.networking = networking
   }
 
-  func fetch(_ latitude: Float, longitude: Float, completion: @escaping (Result<T, Error>) -> Void) {
+  func fetch(_ latitude: Double, longitude: Double, completion: @escaping (Result<T, Error>) -> Void) {
     networking.run(
     route: FoursquareRoutes.venues(latitude: latitude, longitude: longitude)
     ) { (result: Result<T, Error>) in

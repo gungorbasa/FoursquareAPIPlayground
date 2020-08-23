@@ -10,7 +10,7 @@ import Foundation
 
 enum FoursquareRoutes: NetworkRouting {
 
-  case venues(latitude: Float, longitude: Float)
+  case venues(latitude: Double, longitude: Double)
   case details(String)
 
   var host: String { return "https://api.foursquare.com/v2" }

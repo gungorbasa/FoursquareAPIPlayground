@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		2362F65624F0DB94008DACD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F65524F0DB94008DACD5 /* AppDelegate.swift */; };
 		2362F65824F0DB94008DACD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F65724F0DB94008DACD5 /* SceneDelegate.swift */; };
-		2362F65A24F0DB94008DACD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F65924F0DB94008DACD5 /* ViewController.swift */; };
-		2362F65D24F0DB94008DACD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2362F65B24F0DB94008DACD5 /* Main.storyboard */; };
 		2362F65F24F0DB9A008DACD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2362F65E24F0DB9A008DACD5 /* Assets.xcassets */; };
 		2362F66224F0DB9A008DACD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2362F66024F0DB9A008DACD5 /* LaunchScreen.storyboard */; };
 		2362F66D24F0DB9A008DACD5 /* MappyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F66C24F0DB9A008DACD5 /* MappyTests.swift */; };
@@ -36,6 +34,9 @@
 		23EC762824F18B4F00925B9E /* VenueMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC762124F18B4F00925B9E /* VenueMapViewController.swift */; };
 		23EC762924F18B4F00925B9E /* VenueMapBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC762224F18B4F00925B9E /* VenueMapBuilder.swift */; };
 		23EC762A24F18B4F00925B9E /* VenueMapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC762324F18B4F00925B9E /* VenueMapInteractor.swift */; };
+		23EC762D24F2638600925B9E /* AnchorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC762C24F2638600925B9E /* AnchorViewModel.swift */; };
+		23EC762F24F2D90100925B9E /* AnchorViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC762E24F2D90100925B9E /* AnchorViewModelFactory.swift */; };
+		23EC763224F2E02D00925B9E /* MKMapView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC763124F2E02D00925B9E /* MKMapView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +53,6 @@
 		2362F65224F0DB94008DACD5 /* Mappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2362F65524F0DB94008DACD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2362F65724F0DB94008DACD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2362F65924F0DB94008DACD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2362F65C24F0DB94008DACD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2362F65E24F0DB9A008DACD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2362F66124F0DB9A008DACD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2362F66324F0DB9A008DACD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +80,9 @@
 		23EC762124F18B4F00925B9E /* VenueMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueMapViewController.swift; sourceTree = "<group>"; };
 		23EC762224F18B4F00925B9E /* VenueMapBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueMapBuilder.swift; sourceTree = "<group>"; };
 		23EC762324F18B4F00925B9E /* VenueMapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueMapInteractor.swift; sourceTree = "<group>"; };
+		23EC762C24F2638600925B9E /* AnchorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorViewModel.swift; sourceTree = "<group>"; };
+		23EC762E24F2D90100925B9E /* AnchorViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorViewModelFactory.swift; sourceTree = "<group>"; };
+		23EC763124F2E02D00925B9E /* MKMapView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		2362F65424F0DB94008DACD5 /* Mappy */ = {
 			isa = PBXGroup;
 			children = (
+				23EC763024F2E00B00925B9E /* Extension */,
 				23ACCF1124F18AB20008953A /* VenueMapScene */,
 				23ACCF0824F181D00008953A /* Models */,
 				2362F68124F0E123008DACD5 /* Utils */,
@@ -131,8 +134,6 @@
 				2362F69824F100F2008DACD5 /* Services */,
 				2362F65524F0DB94008DACD5 /* AppDelegate.swift */,
 				2362F65724F0DB94008DACD5 /* SceneDelegate.swift */,
-				2362F65924F0DB94008DACD5 /* ViewController.swift */,
-				2362F65B24F0DB94008DACD5 /* Main.storyboard */,
 				2362F65E24F0DB9A008DACD5 /* Assets.xcassets */,
 				2362F66024F0DB9A008DACD5 /* LaunchScreen.storyboard */,
 				2362F66324F0DB9A008DACD5 /* Info.plist */,
@@ -224,8 +225,18 @@
 				23EC762124F18B4F00925B9E /* VenueMapViewController.swift */,
 				23EC762224F18B4F00925B9E /* VenueMapBuilder.swift */,
 				23EC762324F18B4F00925B9E /* VenueMapInteractor.swift */,
+				23EC762C24F2638600925B9E /* AnchorViewModel.swift */,
+				23EC762E24F2D90100925B9E /* AnchorViewModelFactory.swift */,
 			);
 			path = VenueMapScene;
+			sourceTree = "<group>";
+		};
+		23EC763024F2E00B00925B9E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				23EC763124F2E02D00925B9E /* MKMapView+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,7 +329,6 @@
 				2362F66224F0DB9A008DACD5 /* LaunchScreen.storyboard in Resources */,
 				23EC762424F18B4F00925B9E /* VenueMap.storyboard in Resources */,
 				2362F65F24F0DB9A008DACD5 /* Assets.xcassets in Resources */,
-				2362F65D24F0DB94008DACD5 /* Main.storyboard in Resources */,
 				2362F68024F0E04B008DACD5 /* FoursquareConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,10 +347,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2362F65A24F0DB94008DACD5 /* ViewController.swift in Sources */,
 				2362F69E24F107B9008DACD5 /* Service.swift in Sources */,
 				23EC762924F18B4F00925B9E /* VenueMapBuilder.swift in Sources */,
 				2362F69524F10031008DACD5 /* AlamofireNetwork.swift in Sources */,
+				23EC762D24F2638600925B9E /* AnchorViewModel.swift in Sources */,
 				23ACCF0A24F181E00008953A /* Venue.swift in Sources */,
 				23EC762A24F18B4F00925B9E /* VenueMapInteractor.swift in Sources */,
 				2362F68C24F0F82C008DACD5 /* Configurating.swift in Sources */,
@@ -350,6 +360,8 @@
 				2362F68A24F0ED87008DACD5 /* FoursquareConfig.swift in Sources */,
 				2362F65624F0DB94008DACD5 /* AppDelegate.swift in Sources */,
 				23EC762724F18B4F00925B9E /* VenueMapContracts.swift in Sources */,
+				23EC763224F2E02D00925B9E /* MKMapView+Extension.swift in Sources */,
+				23EC762F24F2D90100925B9E /* AnchorViewModelFactory.swift in Sources */,
 				23EC762524F18B4F00925B9E /* VenueMapPresenter.swift in Sources */,
 				23EC762624F18B4F00925B9E /* VenueMapRouter.swift in Sources */,
 				2362F69724F10063008DACD5 /* HTTPResponseError.swift in Sources */,
@@ -381,14 +393,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2362F65B24F0DB94008DACD5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2362F65C24F0DB94008DACD5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2362F66024F0DB9A008DACD5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

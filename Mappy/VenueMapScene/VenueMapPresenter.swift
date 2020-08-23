@@ -10,22 +10,48 @@ import Foundation
 
 final class VenueMapPresenter: VenueMapPresenterProtocol {
 
-    private weak var view: VenueMapViewProtocol?
+  private weak var view: VenueMapViewProtocol?
 
-    private let interactor: VenueMapInteractorProtocol
-    private let router: VenueMapRouterProtocol
+  private let interactor: VenueMapInteractorProtocol
+  private let router: VenueMapRouterProtocol
+  private var venueSet = Set<Venue>()
+  private let factory: AnchorViewModelFactorying
 
-    init(_ view: VenueMapViewProtocol, interactor: VenueMapInteractorProtocol, router: VenueMapRouterProtocol) {
-        self.view = view
-        self.interactor = interactor
-        self.router = router
-        self.interactor.delegate = self
-    }
+  init(
+    _ view: VenueMapViewProtocol,
+    interactor: VenueMapInteractorProtocol,
+    router: VenueMapRouterProtocol,
+    factory: AnchorViewModelFactorying
+  ) {
+    self.view = view
+    self.interactor = interactor
+    self.router = router
+    self.factory = factory
+    self.interactor.delegate = self
+  }
+
+  func venueRegionDidChange(latitude: Double, longitude: Double) {
+    interactor.venues(for: latitude, longitude: longitude)
+  }
 }
 
 extension VenueMapPresenter: VenueMapInteractorDelegate {
 
-    func handleOutput(_ output: VenueMapInteractorOutput) {
-
+  func handleOutput(_ output: VenueMapInteractorOutput) {
+    DispatchQueue.main.async {
+      switch output {
+      case .venueList(let venues):
+        var newVenueSet = Set(venues)
+        newVenueSet.subtract(self.venueSet)
+        for venue in newVenueSet {
+          let viewModel = self.factory.anchorViewModel(from: venue)
+          self.view?.addAnnotation(viewModel: viewModel)
+        }
+        // TODO: This may lead to memory problems. We need to find an eviction strategy
+        self.venueSet = self.venueSet.union(newVenueSet)
+      case .error(let error):
+        print(error.localizedDescription)
+      }
     }
+  }
 }
