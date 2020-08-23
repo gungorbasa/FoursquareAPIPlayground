@@ -33,15 +33,15 @@ protocol VenueMapPresenterProtocol: class {
   func venueRegionDidChange(latitude: Double, longitude: Double)
 }
 
-enum VenueMapPresenterOutput: Equatable {
+enum VenueMapPresenterOutput {
 
+  case anchor(AnchorViewModeling)
 }
 
 // MARK: - View
 protocol VenueMapViewProtocol: class {
 
   func handleOutput(_ output: VenueMapPresenterOutput)
-  func addAnnotation(viewModel: AnchorViewModeling)
 }
 
 // MARK: - Router

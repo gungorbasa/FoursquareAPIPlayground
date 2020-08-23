@@ -24,7 +24,7 @@ final class VenueMapViewController: UIViewController {
     mapView.delegate = self
   }
 
-  func addAnnotation(viewModel: AnchorViewModeling) {
+  private func addAnnotation(viewModel: AnchorViewModeling) {
     mapView.addAnnotation(viewModel)
   }
 }
@@ -41,6 +41,9 @@ extension VenueMapViewController: MKMapViewDelegate {
 extension VenueMapViewController: VenueMapViewProtocol {
 
   func handleOutput(_ output: VenueMapPresenterOutput) {
-
+    switch output {
+    case .anchor(let viewModel):
+      addAnnotation(viewModel: viewModel)
+    }
   }
 }

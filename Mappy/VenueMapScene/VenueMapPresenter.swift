@@ -45,7 +45,7 @@ extension VenueMapPresenter: VenueMapInteractorDelegate {
         newVenueSet.subtract(self.venueSet)
         for venue in newVenueSet {
           let viewModel = self.factory.anchorViewModel(from: venue)
-          self.view?.addAnnotation(viewModel: viewModel)
+          self.view?.handleOutput(.anchor(viewModel))
         }
         // TODO: This may lead to memory problems. We need to find an eviction strategy
         self.venueSet = self.venueSet.union(newVenueSet)
