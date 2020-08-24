@@ -35,6 +35,7 @@ protocol VenueMapPresenterProtocol: class {
 
   func venueRegionDidChange(latitude: Double, longitude: Double)
   func onViewDidLoad()
+  func onDidSelect(annotation: AnchorViewModeling?)
 }
 
 enum VenueMapPresenterOutput {
@@ -52,6 +53,7 @@ protocol VenueMapViewProtocol: class {
 // MARK: - Router
 enum VenueMapRoute: Equatable {
 
+  case details(id: String)
 }
 
 protocol VenueMapRouterProtocol: class {

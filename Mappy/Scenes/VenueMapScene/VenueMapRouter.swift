@@ -10,13 +10,17 @@ import UIKit
 
 final class VenueMapRouter: VenueMapRouterProtocol {
 
-    unowned let view: UIViewController
+    weak var view: UIViewController?
 
     init(_ view: UIViewController) {
         self.view = view
     }
 
     func navigate(to route: VenueMapRoute) {
-
+      switch route {
+      case .details(let id):
+        let vc = VenueDetailsBuilder.make(id: id)
+        view?.present(vc, animated: true, completion: nil)
+      }
     }
 }

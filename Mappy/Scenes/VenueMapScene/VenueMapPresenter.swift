@@ -35,6 +35,11 @@ final class VenueMapPresenter: VenueMapPresenterProtocol {
     interactor.requestLocation()
   }
 
+  func onDidSelect(annotation: AnchorViewModeling?) {
+    guard let viewModel = annotation else { return }
+    router.navigate(to: .details(id: viewModel.id))
+  }
+
   func venueRegionDidChange(latitude: Double, longitude: Double) {
     interactor.venues(for: latitude, longitude: longitude)
   }

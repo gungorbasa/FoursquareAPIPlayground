@@ -24,6 +24,7 @@
 		2362F69724F10063008DACD5 /* HTTPResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F69624F10063008DACD5 /* HTTPResponseError.swift */; };
 		2362F69A24F1011D008DACD5 /* VenueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F69924F1011D008DACD5 /* VenueService.swift */; };
 		2362F69E24F107B9008DACD5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F69D24F107B9008DACD5 /* Service.swift */; };
+		237341BB24F3E25C00DDEB36 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 237341BA24F3E25C00DDEB36 /* Nuke */; };
 		23ACCF0A24F181E00008953A /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ACCF0924F181E00008953A /* Venue.swift */; };
 		23ACCF0C24F1822D0008953A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ACCF0B24F1822D0008953A /* Location.swift */; };
 		23ACCF1024F1833A0008953A /* VenuesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ACCF0F24F1833A0008953A /* VenuesResponse.swift */; };
@@ -38,6 +39,13 @@
 		23EC762F24F2D90100925B9E /* AnchorViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC762E24F2D90100925B9E /* AnchorViewModelFactory.swift */; };
 		23EC763224F2E02D00925B9E /* MKMapView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC763124F2E02D00925B9E /* MKMapView+Extension.swift */; };
 		23EC763424F3046500925B9E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC763324F3046500925B9E /* LocationManager.swift */; };
+		23EC764524F3DE0E00925B9E /* VenueDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23EC763E24F3DE0E00925B9E /* VenueDetails.storyboard */; };
+		23EC764624F3DE0E00925B9E /* VenueDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC763F24F3DE0E00925B9E /* VenueDetailsPresenter.swift */; };
+		23EC764724F3DE0E00925B9E /* VenueDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC764024F3DE0E00925B9E /* VenueDetailsRouter.swift */; };
+		23EC764824F3DE0E00925B9E /* VenueDetailsContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC764124F3DE0E00925B9E /* VenueDetailsContracts.swift */; };
+		23EC764924F3DE0E00925B9E /* VenueDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC764224F3DE0E00925B9E /* VenueDetailsViewController.swift */; };
+		23EC764A24F3DE0E00925B9E /* VenueDetailsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC764324F3DE0E00925B9E /* VenueDetailsBuilder.swift */; };
+		23EC764B24F3DE0E00925B9E /* VenueDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC764424F3DE0E00925B9E /* VenueDetailsInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +93,13 @@
 		23EC762E24F2D90100925B9E /* AnchorViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorViewModelFactory.swift; sourceTree = "<group>"; };
 		23EC763124F2E02D00925B9E /* MKMapView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Extension.swift"; sourceTree = "<group>"; };
 		23EC763324F3046500925B9E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		23EC763E24F3DE0E00925B9E /* VenueDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VenueDetails.storyboard; sourceTree = "<group>"; };
+		23EC763F24F3DE0E00925B9E /* VenueDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailsPresenter.swift; sourceTree = "<group>"; };
+		23EC764024F3DE0E00925B9E /* VenueDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailsRouter.swift; sourceTree = "<group>"; };
+		23EC764124F3DE0E00925B9E /* VenueDetailsContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailsContracts.swift; sourceTree = "<group>"; };
+		23EC764224F3DE0E00925B9E /* VenueDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailsViewController.swift; sourceTree = "<group>"; };
+		23EC764324F3DE0E00925B9E /* VenueDetailsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailsBuilder.swift; sourceTree = "<group>"; };
+		23EC764424F3DE0E00925B9E /* VenueDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailsInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +108,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2362F69324F10010008DACD5 /* Alamofire in Frameworks */,
+				237341BB24F3E25C00DDEB36 /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,8 +143,8 @@
 		2362F65424F0DB94008DACD5 /* Mappy */ = {
 			isa = PBXGroup;
 			children = (
+				23EC764C24F3DE1300925B9E /* Scenes */,
 				23EC763024F2E00B00925B9E /* Extension */,
-				23ACCF1124F18AB20008953A /* VenueMapScene */,
 				23ACCF0824F181D00008953A /* Models */,
 				2362F68124F0E123008DACD5 /* Utils */,
 				2362F67E24F0E02E008DACD5 /* Configuration */,
@@ -242,6 +258,29 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		23EC763D24F3DDC800925B9E /* VenueDetailsScene */ = {
+			isa = PBXGroup;
+			children = (
+				23EC763E24F3DE0E00925B9E /* VenueDetails.storyboard */,
+				23EC763F24F3DE0E00925B9E /* VenueDetailsPresenter.swift */,
+				23EC764024F3DE0E00925B9E /* VenueDetailsRouter.swift */,
+				23EC764124F3DE0E00925B9E /* VenueDetailsContracts.swift */,
+				23EC764224F3DE0E00925B9E /* VenueDetailsViewController.swift */,
+				23EC764324F3DE0E00925B9E /* VenueDetailsBuilder.swift */,
+				23EC764424F3DE0E00925B9E /* VenueDetailsInteractor.swift */,
+			);
+			path = VenueDetailsScene;
+			sourceTree = "<group>";
+		};
+		23EC764C24F3DE1300925B9E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				23ACCF1124F18AB20008953A /* VenueMapScene */,
+				23EC763D24F3DDC800925B9E /* VenueDetailsScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -260,6 +299,7 @@
 			name = Mappy;
 			packageProductDependencies = (
 				2362F69224F10010008DACD5 /* Alamofire */,
+				237341BA24F3E25C00DDEB36 /* Nuke */,
 			);
 			productName = Mappy;
 			productReference = 2362F65224F0DB94008DACD5 /* Mappy.app */;
@@ -313,6 +353,7 @@
 			mainGroup = 2362F64924F0DB94008DACD5;
 			packageReferences = (
 				2362F69124F10010008DACD5 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				237341B924F3E25C00DDEB36 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = 2362F65324F0DB94008DACD5 /* Products */;
 			projectDirPath = "";
@@ -333,6 +374,7 @@
 				23EC762424F18B4F00925B9E /* VenueMap.storyboard in Resources */,
 				2362F65F24F0DB9A008DACD5 /* Assets.xcassets in Resources */,
 				2362F68024F0E04B008DACD5 /* FoursquareConfig.plist in Resources */,
+				23EC764524F3DE0E00925B9E /* VenueDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,15 +407,21 @@
 				2362F65624F0DB94008DACD5 /* AppDelegate.swift in Sources */,
 				23EC762724F18B4F00925B9E /* VenueMapContracts.swift in Sources */,
 				23EC763224F2E02D00925B9E /* MKMapView+Extension.swift in Sources */,
+				23EC764624F3DE0E00925B9E /* VenueDetailsPresenter.swift in Sources */,
+				23EC764824F3DE0E00925B9E /* VenueDetailsContracts.swift in Sources */,
 				23EC762F24F2D90100925B9E /* AnchorViewModelFactory.swift in Sources */,
+				23EC764B24F3DE0E00925B9E /* VenueDetailsInteractor.swift in Sources */,
+				23EC764A24F3DE0E00925B9E /* VenueDetailsBuilder.swift in Sources */,
 				23EC762524F18B4F00925B9E /* VenueMapPresenter.swift in Sources */,
 				23EC762624F18B4F00925B9E /* VenueMapRouter.swift in Sources */,
 				2362F69724F10063008DACD5 /* HTTPResponseError.swift in Sources */,
 				2362F65824F0DB94008DACD5 /* SceneDelegate.swift in Sources */,
 				23ACCF1024F1833A0008953A /* VenuesResponse.swift in Sources */,
+				23EC764724F3DE0E00925B9E /* VenueDetailsRouter.swift in Sources */,
 				2362F69A24F1011D008DACD5 /* VenueService.swift in Sources */,
 				2362F67B24F0DD16008DACD5 /* FoursquareRoutes.swift in Sources */,
 				2362F68E24F0FD46008DACD5 /* DependecyContainer.swift in Sources */,
+				23EC764924F3DE0E00925B9E /* VenueDetailsViewController.swift in Sources */,
 				23EC762824F18B4F00925B9E /* VenueMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -643,6 +691,14 @@
 				minimumVersion = 5.2.2;
 			};
 		};
+		237341B924F3E25C00DDEB36 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -650,6 +706,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2362F69124F10010008DACD5 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		237341BA24F3E25C00DDEB36 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 237341B924F3E25C00DDEB36 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

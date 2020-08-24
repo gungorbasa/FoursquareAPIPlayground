@@ -9,20 +9,26 @@
 import Foundation
 import MapKit
 
-protocol AnchorViewModeling: MKAnnotation { }
+protocol AnchorViewModeling: MKAnnotation {
+
+  var id: String { get }
+}
 
 final class AnchorViewModel: NSObject, AnchorViewModeling {
 
-  var coordinate: CLLocationCoordinate2D
-  var title: String?
-  var subtitle: String?
+  let id: String
+  let coordinate: CLLocationCoordinate2D
+  let title: String?
+  let subtitle: String?
 
   init(
+    id: String,
     latitude: Double,
     longitude: Double,
     title: String? = nil,
     subtitle: String? = nil
   ) {
+    self.id = id
     self.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     self.title = title
     self.subtitle = subtitle

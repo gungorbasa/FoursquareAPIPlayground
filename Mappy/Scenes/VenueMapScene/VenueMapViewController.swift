@@ -38,15 +38,7 @@ extension VenueMapViewController: MKMapViewDelegate {
   }
 
   func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-    guard let ann = view.annotation as? AnchorViewModeling else {
-      print("nooooo")
-      return
-    }
-    print(ann)
-  }
-
-  func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-    print(view.annotation)
+    presenter.onDidSelect(annotation: view.annotation as? AnchorViewModeling)
   }
 }
 

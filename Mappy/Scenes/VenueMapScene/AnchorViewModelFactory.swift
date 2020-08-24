@@ -17,6 +17,7 @@ final class AnchorViewModelFactory: AnchorViewModelFactorying {
 
   func anchorViewModel(from model: Venue) -> AnchorViewModeling {
     return AnchorViewModel(
+      id: model.id,
       latitude: model.location.lat,
       longitude: model.location.lng,
       title: model.name,
