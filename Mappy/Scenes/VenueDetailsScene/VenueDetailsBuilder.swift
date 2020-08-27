@@ -18,9 +18,10 @@ final class VenueDetailsBuilder {
     //        let networkWorker = NetworkWorker(app.networking)
     //        let service = RestaurantListService(networkWorker, database: DbWorker(Database()))
     //        //        MovieListInteractor(app.service)
-    let interactor = VenueDetailsInteractor()
+    let service = VenueDetailsService()
+    let interactor = VenueDetailsInteractor(service)
     //        let interactor = VenueDetailsInteractor(service)
-    let presenter = VenueDetailsPresenter(view, interactor: interactor, router: router)
+    let presenter = VenueDetailsPresenter(view, interactor: interactor, router: router, id: id)
     view.presenter = presenter
     return view
   }

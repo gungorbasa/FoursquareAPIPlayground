@@ -12,10 +12,14 @@ import Foundation
 protocol VenueDetailsInteractorProtocol: class {
   
   var delegate: VenueDetailsInteractorDelegate? { get set }
+
+  func fetchVenueDetails(id: String)
 }
 
 enum VenueDetailsInteractorOutput {
   
+  case details(VenueDetails)
+  case error(Error)
 }
 
 protocol VenueDetailsInteractorDelegate: class {
@@ -25,7 +29,8 @@ protocol VenueDetailsInteractorDelegate: class {
 
 // MARK: - Presenter
 protocol VenueDetailsPresenterProtocol: class {
-  
+
+  func onViewDidLoad()
 }
 
 enum VenueDetailsPresenterOutput: Equatable {

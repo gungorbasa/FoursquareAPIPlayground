@@ -10,10 +10,6 @@ import Foundation
 
 struct VenuesResponse: Codable {
 
-  enum ResponseKeys: String, CodingKey {
-    case response
-  }
-
   init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: ResponseKeys.self)
     let venueContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .response)

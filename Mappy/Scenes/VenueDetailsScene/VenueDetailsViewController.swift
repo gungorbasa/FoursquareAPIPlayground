@@ -14,6 +14,7 @@ final class VenueDetailsViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    presenter.onViewDidLoad()
     setup()
   }
   
