@@ -34,8 +34,9 @@ final class AlamofireNetwork: Networking {
           completion(.failure(response.error ?? HTTPResponseError.unknown))
           return
         }
-        print(response.value)
         completion(.success(object))
+    }.cURLDescription { resp in
+      print(resp)
     }
   }
 

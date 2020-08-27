@@ -9,5 +9,10 @@
 import Foundation
 
 struct VenueDetails: Codable {
-  
+
+  let location: Location
+  let name: String
+  let bestPhoto: Photo?
+  let hereNow: HereNow?
+  let hours: Hours?
 }

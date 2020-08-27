@@ -15,14 +15,18 @@ final class VenueDetailsBuilder {
     let view = storyboard.instantiateViewController(withIdentifier: "VenueDetailsViewController") as! VenueDetailsViewController
     // TODO: Injections
     let router = VenueDetailsRouter(view)
-    //        let networkWorker = NetworkWorker(app.networking)
-    //        let service = RestaurantListService(networkWorker, database: DbWorker(Database()))
-    //        //        MovieListInteractor(app.service)
     let service = VenueDetailsService()
     let interactor = VenueDetailsInteractor(service)
-    //        let interactor = VenueDetailsInteractor(service)
-    let presenter = VenueDetailsPresenter(view, interactor: interactor, router: router, id: id)
+    let formatter = AddressFormatter()
+    let presenter = VenueDetailsPresenter(
+      view,
+      interactor: interactor,
+      router: router,
+      addressFormatter: formatter,
+      id: id
+    )
     view.presenter = presenter
+    view.imageLoader = ImageLoader.shared
     return view
   }
 }

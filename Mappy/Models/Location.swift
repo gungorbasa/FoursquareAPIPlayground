@@ -12,4 +12,6 @@ struct Location: Codable, Hashable {
   
   let lat: Double
   let lng: Double
+  let address: String?
+  let formattedAddress: [String]?
 }

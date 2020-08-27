@@ -36,7 +36,7 @@ enum FoursquareRoutes: NetworkRouting {
     case .venues(let latitude, let longitude):
       defaultParams["ll"] = "\(latitude), \(longitude)"
     default:
-      return [:]
+      break
     }
     return defaultParams
   }

@@ -33,8 +33,13 @@ protocol VenueDetailsPresenterProtocol: class {
   func onViewDidLoad()
 }
 
-enum VenueDetailsPresenterOutput: Equatable {
+enum VenueDetailsPresenterOutput {
   
+  case image(URL)
+  case name(String)
+  case address(String)
+  case hours(String)
+  case alert(String)
 }
 
 // MARK: - View
