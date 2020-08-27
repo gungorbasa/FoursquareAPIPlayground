@@ -16,5 +16,9 @@ struct VenuesDetailsResponse: Codable {
     venue = try venueContainer.decode(VenueDetails.self, forKey: .venue)
   }
 
+  init(venue: VenueDetails) {
+    self.venue = venue
+  }
+
   let venue: VenueDetails
 }

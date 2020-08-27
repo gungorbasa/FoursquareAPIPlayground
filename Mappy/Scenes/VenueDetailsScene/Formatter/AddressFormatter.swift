@@ -14,6 +14,7 @@ protocol AddressFormatting {
 }
 
 final class AddressFormatter: AddressFormatting {
+  
   func formattedAddress(from location: Location) -> String {
     guard let formattedArray = location.formattedAddress else {
       return location.address ?? ""
