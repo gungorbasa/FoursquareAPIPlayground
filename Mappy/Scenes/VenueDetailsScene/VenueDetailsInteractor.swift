@@ -29,8 +29,4 @@ final class VenueDetailsInteractor: VenueDetailsInteractorProtocol {
       }
     }
   }
-
-  func fetchPhotos(id: String) {
-    
-  }
 }
