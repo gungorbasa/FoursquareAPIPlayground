@@ -31,6 +31,8 @@ class VenueDetailsInteractorTest: XCTestCase {
     hours: nil
   )
   private let error = DetailsError.testError
+  private var successInteractor: VenueDetailsInteractor?
+  private var failInteractor: VenueDetailsInteractor?
 
 
   func testSuccess() throws {
@@ -38,16 +40,16 @@ class VenueDetailsInteractorTest: XCTestCase {
     serviceMock.result = .success(
       response
     )
-    let interactor = VenueDetailsInteractor(serviceMock)
-    interactor.fetchVenueDetails(id: "id")
-    interactor.delegate = self
+    successInteractor = VenueDetailsInteractor(serviceMock)
+    successInteractor?.delegate = self
+    successInteractor?.fetchVenueDetails(id: "id")
   }
 
   func testFailure() throws {
     serviceMock.result = .failure(DetailsError.testError)
-    let interactor = VenueDetailsInteractor(serviceMock)
-    interactor.fetchVenueDetails(id: "id")
-    interactor.delegate = self
+    failInteractor = VenueDetailsInteractor(serviceMock)
+    failInteractor?.delegate = self
+    failInteractor?.fetchVenueDetails(id: "id")
   }
 }
 
@@ -58,7 +60,7 @@ extension VenueDetailsInteractorTest: VenueDetailsInteractorDelegate {
     case .details(let details):
       XCTAssertTrue(details == self.details)
     case .error(let error):
-      XCTAssertTrue(error.localizedDescription == DetailsError.testError.localizedDescription)
+      XCTAssertTrue(DetailsError.testError.localizedDescription == error.localizedDescription)
     }
   }
 }
