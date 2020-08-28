@@ -60,7 +60,12 @@ extension VenueDetailsInteractorTest: VenueDetailsInteractorDelegate {
     case .details(let details):
       XCTAssertTrue(details == self.details)
     case .error(let error):
-      XCTAssertTrue(DetailsError.testError.localizedDescription == error.localizedDescription)
+      switch error {
+      case DetailsError.testError:
+        break
+      default:
+        XCTFail("Error should be in the type of DetailsError.testError")
+      }
     }
   }
 }

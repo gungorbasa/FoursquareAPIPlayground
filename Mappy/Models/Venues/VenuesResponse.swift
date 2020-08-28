@@ -15,6 +15,10 @@ struct VenuesResponse: Codable {
     let venueContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .response)
     venues = try venueContainer.decode([Venue].self, forKey: .venues)
   }
+
+  init(venues: [Venue]) {
+    self.venues = venues
+  }
   
   let venues: [Venue]
 }

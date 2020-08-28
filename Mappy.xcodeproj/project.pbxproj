@@ -16,6 +16,8 @@
 		234D0F1C24F8EEF5009F94EB /* Configurating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F68B24F0F82C008DACD5 /* Configurating.swift */; };
 		234D0F1D24F8EF1C009F94EB /* FoursquareConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F68924F0ED87008DACD5 /* FoursquareConfig.swift */; };
 		234D0F2024F8F05E009F94EB /* AnchorViewModelFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234D0F1F24F8F05E009F94EB /* AnchorViewModelFactoryTest.swift */; };
+		234D0F2424F8F3E1009F94EB /* NetworkingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234D0F2324F8F3E1009F94EB /* NetworkingMock.swift */; };
+		234D0F2624F8FB2E009F94EB /* VenueServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234D0F2524F8FB2E009F94EB /* VenueServiceTest.swift */; };
 		2362F65624F0DB94008DACD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F65524F0DB94008DACD5 /* AppDelegate.swift */; };
 		2362F65824F0DB94008DACD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362F65724F0DB94008DACD5 /* SceneDelegate.swift */; };
 		2362F65F24F0DB9A008DACD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2362F65E24F0DB9A008DACD5 /* Assets.xcassets */; };
@@ -86,6 +88,8 @@
 		2333150924F7D94D00C0EA01 /* HereNow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HereNow.swift; sourceTree = "<group>"; };
 		2333150D24F8287500C0EA01 /* AddressFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressFormatter.swift; sourceTree = "<group>"; };
 		234D0F1F24F8F05E009F94EB /* AnchorViewModelFactoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorViewModelFactoryTest.swift; sourceTree = "<group>"; };
+		234D0F2324F8F3E1009F94EB /* NetworkingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingMock.swift; sourceTree = "<group>"; };
+		234D0F2524F8FB2E009F94EB /* VenueServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueServiceTest.swift; sourceTree = "<group>"; };
 		2362F65224F0DB94008DACD5 /* Mappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2362F65524F0DB94008DACD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2362F65724F0DB94008DACD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +201,23 @@
 			path = VenueMap;
 			sourceTree = "<group>";
 		};
+		234D0F2124F8F3A4009F94EB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				234D0F2224F8F3BA009F94EB /* Mocks */,
+				234D0F2524F8FB2E009F94EB /* VenueServiceTest.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		234D0F2224F8F3BA009F94EB /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				234D0F2324F8F3E1009F94EB /* NetworkingMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		2362F64924F0DB94008DACD5 = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				239DECAB24F8E2B600A981D7 /* Configuration */,
+				234D0F2124F8F3A4009F94EB /* Service */,
 				234D0F1E24F8F044009F94EB /* VenueMap */,
 				2391ED5124F82DC700DE0E0F /* VenueDetails */,
 				2362F66C24F0DB9A008DACD5 /* MappyTests.swift */,
@@ -568,6 +590,8 @@
 				2362F66D24F0DB9A008DACD5 /* MappyTests.swift in Sources */,
 				234D0F1D24F8EF1C009F94EB /* FoursquareConfig.swift in Sources */,
 				234D0F2024F8F05E009F94EB /* AnchorViewModelFactoryTest.swift in Sources */,
+				234D0F2624F8FB2E009F94EB /* VenueServiceTest.swift in Sources */,
+				234D0F2424F8F3E1009F94EB /* NetworkingMock.swift in Sources */,
 				239DECAF24F8E32300A981D7 /* ConfigurationTest.swift in Sources */,
 				239DECA824F82FF200A981D7 /* VenueDetailsInteractorTest.swift in Sources */,
 				2391ED5324F82DE400DE0E0F /* AddressFormatterTest.swift in Sources */,
